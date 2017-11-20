@@ -1,0 +1,1136 @@
+
+<!doctype html>
+<html class="theme-next use-motion theme-next-mala">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+
+
+  <meta name="keywords" content="Hexo,Mala" />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="Vue.js 课程讲义Vue.js 介绍 作者：尤雨溪 Vue.js (读音 /vjuː/，类似于 view) 是一套构建用户界面的渐进式框架 发展历史  起步安装 Vue.js 不支持 IE8 及其以下版本，因为 Vue.js 使用了 IE8 不能模拟的 ECMAScript 5 特性。Vue.js 支持所有兼容 ECMAScript 5 的浏览器。 每个版本的更新日志见 GitHub - re">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue">
+<meta property="og:url" content="https://liuxian123.github.io/2017/11/21/vue/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Vue.js 课程讲义Vue.js 介绍 作者：尤雨溪 Vue.js (读音 /vjuː/，类似于 view) 是一套构建用户界面的渐进式框架 发展历史  起步安装 Vue.js 不支持 IE8 及其以下版本，因为 Vue.js 使用了 IE8 不能模拟的 ECMAScript 5 特性。Vue.js 支持所有兼容 ECMAScript 5 的浏览器。 每个版本的更新日志见 GitHub - re">
+<meta property="og:updated_time" content="2017-11-20T12:06:38.695Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue">
+<meta name="twitter:description" content="Vue.js 课程讲义Vue.js 介绍 作者：尤雨溪 Vue.js (读音 /vjuː/，类似于 view) 是一套构建用户界面的渐进式框架 发展历史  起步安装 Vue.js 不支持 IE8 及其以下版本，因为 Vue.js 使用了 IE8 不能模拟的 ECMAScript 5 特性。Vue.js 支持所有兼容 ECMAScript 5 的浏览器。 每个版本的更新日志见 GitHub - re">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mala',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> Vue | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title"></span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            Kategorien
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            Über
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    
+      
+
+      
+        <style type="text/css">
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        background: #555 no-repeat;
+        cursor: move;
+    }
+
+    .assist-btn {
+        position: fixed;
+        top: 50％;
+        left: 10px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        color: #87daff;
+    }
+
+</style>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript">
+    // 浮动圆点展开与收缩
+    /*
+    $(function () {
+        var assist_box = $('.assist-box');
+        $('#assist_btn').hover(function () {
+            assist_box.stop().show(300);
+        }, function () {
+            assist_box.stop().hide(150);
+        })
+    });
+    */  
+    //浮动圆点拖动
+    $(function () {
+        var box = document.getElementById('assist_btn');
+        box.onmousedown = function (event) {
+            var e = event || window.event,
+                t = e.target || e.srcElement,
+                // 鼠标按下时的坐标x1,y1
+                x1 = e.clientX,
+                y1 = e.clientY,
+                //鼠标按下时的左右偏移量
+                dragLeft = this.offsetLeft,
+                dragTop = this.offsetTop;
+
+            document.onmousemove = function (event) {
+                var e = event || window.event,
+                    t = e.target || e.srcElement,
+                    // 鼠标移动时的动态坐标
+                    x2 = e.clientX,
+                    y2 = e.clientY,
+                    // 鼠标移动时的坐标的变化量
+                    x = x2 - x1,
+                    y = y2 - y1;
+                box.style.left = (dragLeft + x) + 'px';
+                box.style.top = (dragTop + y) + 'px';
+            }
+
+            document.onmouseup = function () {
+                this.onmousemove = null;
+            }
+        }
+    });
+
+/*
+    $whitesmoke   = #f5f5f5
+    $gainsboro    = #eee
+    $gray-lighter = #ddd
+    $grey-light   = #ccc
+    $grey         = #bbb
+    $grey-dark    = #999
+    $grey-dim     = #666
+    $black-light  = #555
+    $black-deep   = #222
+    $red          = #ff2a2a
+    $blue-bright  = #87daff
+    $blue         = #0684bd
+    $blue-deep    = #262a30
+*/
+    // white theme
+    var body = {color: "#555", background: "white"};
+    var a_tag = {color: "#222"};
+    var header = { background: "#f5f5f5"};
+    var logo_line_i = {background: "#222"};
+    // var post_code = {background: "#eee", color: "#222"};
+
+    function switch_theme() {
+        $("body").css(body);
+        $("a:not('.links-of-author-item a, .site-state-item a, .site-state-posts a, .feed-link a, .motion-element a, .post-tags a, .show-commit-cls a, #donate_board a')").css(a_tag);
+        $(".header, .footer").css(header);
+        $(".logo-line-before i, .logo-line-after i").css(logo_line_i);
+        //$(".post code").css(post_code);
+        $("#idhyt-surprise-ball #idhyt-surprise-ball-animation .drag").css(a_tag);
+        $(".post-title-link, .posts-expand .post-meta, .post-comments-count, .disqus-comment-count, .post-category a, .post-nav-next a, .post-nav-item a").css(a_tag);
+        
+        // $("code").css({color: '#c5c8c6', background: '#1d1f21'});
+        $("#assist_btn").hide(1500);
+    }
+
+    $(function () {
+        $("#assist_btn").dblclick(function() {
+            switch_theme();
+        });
+    });
+
+</script>
+
+<div>
+
+    <button class="assist-btn circle" id="assist_btn" title="双击切换">
+        亮
+    </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+      
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Vue
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Veröffentlicht am
+          <time itemprop="dateCreated" datetime="2017-11-21T14:28:06+08:00" content="2017-11-21">
+            2017-11-21
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h1 id="Vue-js-课程讲义"><a href="#Vue-js-课程讲义" class="headerlink" title="Vue.js 课程讲义"></a>Vue.js 课程讲义</h1><h2 id="Vue-js-介绍"><a href="#Vue-js-介绍" class="headerlink" title="Vue.js 介绍"></a>Vue.js 介绍</h2><ul>
+<li>作者：尤雨溪</li>
+<li>Vue.js (读音 /vjuː/，类似于 <strong>view</strong>) 是一套构建用户界面的<strong>渐进式框架</strong></li>
+<li>发展历史</li>
+</ul>
+<h2 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
+<li>Vue.js 不支持 IE8 及其以下版本，因为 Vue.js 使用了 IE8 不能模拟的 ECMAScript 5 特性。Vue.js 支持所有<a href="http://caniuse.com/#feat=es5" target="_blank" rel="external">兼容 ECMAScript 5 的浏览器</a>。</li>
+<li>每个版本的更新日志见 <a href="https://github.com/vuejs/vue/releases" target="_blank" rel="external">GitHub - releases</a></li>
+<li>直接下载<ul>
+<li><a href="https://vuejs.org/js/vue.js" target="_blank" rel="external">https://vuejs.org/js/vue.js</a></li>
+<li><a href="https://vuejs.org/js/vue.min.js" target="_blank" rel="external">https://vuejs.org/js/vue.min.js</a></li>
+</ul>
+</li>
+<li>使用 npm 下载<ul>
+<li><code>npm install vue</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="Vue-实例"><a href="#Vue-实例" class="headerlink" title="Vue 实例"></a>Vue 实例</h3><ul>
+<li>data</li>
+<li>methods</li>
+<li>el</li>
+</ul>
+<h3 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h3><ul>
+<li><code>&amp;#40&amp;#40data&amp;#41&amp;#41</code></li>
+<li><code>v-html</code></li>
+<li><code>v-bind</code><ul>
+<li>缩写 <code>:属性名称=&quot;表达式&quot;</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="表单控件双向绑定"><a href="#表单控件双向绑定" class="headerlink" title="表单控件双向绑定"></a>表单控件双向绑定</h3><ul>
+<li>text</li>
+<li>checkbox</li>
+<li>radio</li>
+<li>select</li>
+</ul>
+<h3 id="条件与循环"><a href="#条件与循环" class="headerlink" title="条件与循环"></a>条件与循环</h3><ul>
+<li><code>v-if</code></li>
+<li><code>v-for</code></li>
+</ul>
+<h3 id="事件注册"><a href="#事件注册" class="headerlink" title="事件注册"></a>事件注册</h3><ul>
+<li><code>v-on</code></li>
+</ul>
+<h3 id="小案例"><a href="#小案例" class="headerlink" title="小案例"></a>小案例</h3><ul>
+<li>自增</li>
+<li>计算器</li>
+</ul>
+<h2 id="案例：TodoMVC"><a href="#案例：TodoMVC" class="headerlink" title="案例：TodoMVC"></a>案例：TodoMVC</h2><h2 id="案例：购物车"><a href="#案例：购物车" class="headerlink" title="案例：购物车"></a>案例：购物车</h2><ul>
+<li>列表展示</li>
+<li>商品数量 总金额</li>
+<li>删除</li>
+<li>全选</li>
+<li>取消全选</li>
+<li>结账</li>
+<li>货币格式化：过滤器</li>
+</ul>
+<h2 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h2><h2 id="计算属性和观察者"><a href="#计算属性和观察者" class="headerlink" title="计算属性和观察者"></a>计算属性和观察者</h2><h2 id="Class-与-Style"><a href="#Class-与-Style" class="headerlink" title="Class 与 Style"></a>Class 与 Style</h2><h2 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h2><ul>
+<li><code>v-if</code></li>
+<li><code>v-else</code><ul>
+<li><code>v-else</code> 元素必须紧跟在带 <code>v-if</code> 或者 <code>v-else-if</code> 的元素的后面</li>
+</ul>
+</li>
+<li><code>v-if</code> 和 <code>&lt;template&gt;</code></li>
+<li><code>v-else-if</code><ul>
+<li>类似于 <code>v-else</code>，<code>v-else-if</code> 也必须紧跟在带 <code>v-if</code> 或者 <code>v-else-if</code> 的元素之后</li>
+</ul>
+</li>
+<li><code>v-show</code><ul>
+<li><code>v-show</code> 只是简单地切换元素的 CSS 属性 <code>display</code></li>
+<li><code>v-show</code> 不支持 <code>&lt;template&gt;</code> 元素，也不支持 <code>v-else</code></li>
+</ul>
+</li>
+<li><code>v-if</code> 和 <code>v-show</code> 的区别<ul>
+<li><code>v-if</code> 是“真正”的条件渲染，条件为真则渲染，条件为假则移除 DOM 元素</li>
+<li><code>v-show</code> 不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换</li>
+<li><code>v-if</code> 有更高的切换开销，而 <code>v-show</code> 有更高的初始渲染开销</li>
+<li>因此，如果需要非常频繁地切换，则使用 <code>v-show</code> 较好；如果在运行时条件很少改变，则使用 <code>v-if</code> 较好</li>
+</ul>
+</li>
+</ul>
+<h2 id="列表渲染"><a href="#列表渲染" class="headerlink" title="列表渲染"></a>列表渲染</h2><ul>
+<li><code>v-for=&quot;item in items&quot;</code></li>
+<li><code>v-for=&quot;(item, index) in items&quot;</code></li>
+<li><code>v-for=&quot;item of items&quot;</code><ul>
+<li>可以用 <code>of</code> 替代 <code>in</code> 作为分隔符，因为它是最接近 JavaScript 迭代器的语法</li>
+</ul>
+</li>
+<li>对象迭代<ul>
+<li><code>v-for=&quot;value in object&quot;</code></li>
+<li><code>v-for=&quot;(value, key) in object&quot;</code></li>
+<li><code>v-for=&quot;(value, key, index) in object&quot;</code></li>
+</ul>
+</li>
+<li>数组更新检测</li>
+<li>对象更新检测</li>
+<li>过滤和排序</li>
+<li>取值范围遍历</li>
+<li><code>v-for</code> 和 <code>template</code></li>
+</ul>
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><h2 id="表单输入绑定"><a href="#表单输入绑定" class="headerlink" title="表单输入绑定"></a>表单输入绑定</h2><h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><h3 id="组件概念"><a href="#组件概念" class="headerlink" title="组件概念"></a>组件概念</h3><blockquote>
+<p>Vue 中的组件化开发的目的就是把网页拆成一个一个的小块来开发，最后把这些组件块组装到一起，这种方式非常灵活，可以极大的提高我们开发和维护的效率。</p>
+</blockquote>
+<ul>
+<li>Vue 中的组件思想借鉴自 React</li>
+<li>目前主流的前端框架：Angular、Vue、React 都是组件化开发思想</li>
+</ul>
+<ul>
+<li>组件就是对局部视图的封装<ul>
+<li>HTML 结构</li>
+<li>CSS 样式</li>
+<li>JavaScript 行为<ul>
+<li>data 数据</li>
+<li>methods 行为</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>提高开发效率，增强可维护性，享受编程的乐趣</li>
+</ul>
+<h3 id="使用组件"><a href="#使用组件" class="headerlink" title="使用组件"></a>使用组件</h3><h4 id="全局注册（通用组件）"><a href="#全局注册（通用组件）" class="headerlink" title="全局注册（通用组件）"></a>全局注册（通用组件）</h4><blockquote>
+<p>我们一般把网页中特殊的公共部分注册为全局组件：轮播图、tab 选项卡、分页、通用导航</p>
+</blockquote>
+<p>注册：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注册</span></span><br><span class="line">Vue.component('my-component', &amp;#40</span><br><span class="line">  template: <span class="string">'&lt;div&gt;A custom component!&lt;/div&gt;'</span></span><br><span class="line">&amp;#41)</span><br></pre></td></tr></table></figure>
+<p>使用：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 在 Sublime 中按 Ctrl+E 自动补齐 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">my-component</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="局部注册（子组件）"><a href="#局部注册（子组件）" class="headerlink" title="局部注册（子组件）"></a>局部注册（子组件）</h4><blockquote>
+<p>局部注册一般是注册一些非通用，只适用于当前项目的。</p>
+</blockquote>
+<p>注册：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var Child = &amp;#40</span><br><span class="line">  template: <span class="string">'&lt;div&gt;A custom component!&lt;/div&gt;'</span></span><br><span class="line">&amp;#41</span><br><span class="line">new Vue(&amp;#40</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  components: &amp;#40</span><br><span class="line">    <span class="comment">// &lt;my-component&gt; 将只在父组件模板中可用</span></span><br><span class="line">    <span class="string">'my-component'</span>: Child</span><br><span class="line">  &amp;#41</span><br><span class="line">&amp;#41)</span><br></pre></td></tr></table></figure>
+<p>使用：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">my-component</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="组件与组件之间是相互独立的"><a href="#组件与组件之间是相互独立的" class="headerlink" title="组件与组件之间是相互独立的"></a>组件与组件之间是相互独立的</h4><ul>
+<li>默认情况下，组件与组件之间无法进行跨组件数据访问，父子组件也不行</li>
+<li>组件就是一种特殊的 Vue 实例，不需要实例化，它管理自己的 <code>template</code></li>
+<li>在组件中，也可以配置自己的类似于 Vue 实例中的一些选项资源：data、methods、computed</li>
+<li>思想：组件自己管理自己，不影响别人</li>
+</ul>
+<h4 id="组件的-data-必须是函数"><a href="#组件的-data-必须是函数" class="headerlink" title="组件的 data 必须是函数"></a>组件的 <code>data</code> 必须是函数</h4><ul>
+<li>组件的 data 必须是函数（手动 new 出来的 Vue 实例还是普通的对象）</li>
+<li>函数内部返回一个对象</li>
+</ul>
+<h4 id="使用组件注意事项"><a href="#使用组件注意事项" class="headerlink" title="使用组件注意事项"></a>使用组件注意事项</h4><blockquote>
+<p>组件可以理解为特殊的 Vue 实例，管理自己的 <code>template</code> 模板</p>
+</blockquote>
+<ul>
+<li>组件的 template 必须有且只有一个根节点</li>
+</ul>
+<ul>
+<li>组件与组件之间是相互独立的，可以有自己的 data、methods、computed 。。。</li>
+<li>组件的 data 必须是函数</li>
+</ul>
+<h3 id="父子组件通信：Props-Down"><a href="#父子组件通信：Props-Down" class="headerlink" title="父子组件通信：Props Down"></a>父子组件通信：Props Down</h3><h3 id="父子组件通信：Events-Up"><a href="#父子组件通信：Events-Up" class="headerlink" title="父子组件通信：Events Up"></a>父子组件通信：Events Up</h3><h3 id="使用插槽分发组件内容"><a href="#使用插槽分发组件内容" class="headerlink" title="使用插槽分发组件内容"></a>使用插槽分发组件内容</h3><h3 id="动态组件"><a href="#动态组件" class="headerlink" title="动态组件"></a>动态组件</h3><h3 id="组件其它"><a href="#组件其它" class="headerlink" title="组件其它"></a>组件其它</h3><h2 id="进入-离开-amp-列表过渡"><a href="#进入-离开-amp-列表过渡" class="headerlink" title="进入/离开 &amp; 列表过渡"></a>进入/离开 &amp; 列表过渡</h2><h2 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h2><ul>
+<li>注册</li>
+</ul>
+<h2 id="Vue-指令"><a href="#Vue-指令" class="headerlink" title="Vue 指令"></a>Vue 指令</h2><h3 id="系统内置指令"><a href="#系统内置指令" class="headerlink" title="系统内置指令"></a>系统内置指令</h3><ul>
+<li><a href="https://cn.vuejs.org/v2/api/#v-text" target="_blank" rel="external">v-text</a><ul>
+<li>和 <code>&amp;#40&amp;#40&amp;#41&amp;#41</code> 一样的，唯一的区别是</li>
+<li><code>&amp;#40&amp;#40&amp;#41&amp;#41</code> 会造成闪烁问题</li>
+<li><code>v-text</code> 不会有闪烁问题</li>
+<li>如果还想用 <code>&amp;#40&amp;#40&amp;#41&amp;#41</code> 又不想有闪烁问题，则使用 <code>v-cloak</code> 来处理</li>
+</ul>
+</li>
+<li><a href="https://cn.vuejs.org/v2/api/#v-html" target="_blank" rel="external">v-html</a></li>
+<li><a href="https://cn.vuejs.org/v2/api/#v-show" target="_blank" rel="external">v-show</a><ul>
+<li>条件显示和隐藏</li>
+<li>无论真假，都会渲染显示在 DOM 结构中</li>
+<li>条件为真，则让 display 显示</li>
+<li>条件为假，则 display 不显示</li>
+<li>如果需要频繁的切换显示和隐藏，则使用 v-show</li>
+</ul>
+</li>
+<li><a href="https://cn.vuejs.org/v2/api/#v-if" target="_blank" rel="external">v-if</a><ul>
+<li>真正的条件渲染</li>
+<li>条件为真，则渲染这个 DOM</li>
+<li>条件为假，则移除不渲染这个 DOM</li>
+<li>如果只是一次显示或隐藏，则建议 v-if</li>
+<li>v-if 和 v-show<ul>
+<li>一般来说，<code>v-if</code> 有更高的切换开销，而 <code>v-show</code> 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 <code>v-show</code> 较好；如果在运行时条件很少改变，则使用 <code>v-if</code> 较好。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://cn.vuejs.org/v2/api/#v-else" target="_blank" rel="external">v-else</a></li>
+<li><a href="https://cn.vuejs.org/v2/api/#v-else-if" target="_blank" rel="external">v-else-if</a></li>
+<li><a href="https://cn.vuejs.org/v2/api/#v-for" target="_blank" rel="external">v-for</a></li>
+<li><a href="https://cn.vuejs.org/v2/api/#v-on" target="_blank" rel="external">v-on</a></li>
+<li><a href="https://cn.vuejs.org/v2/api/#v-bind" target="_blank" rel="external">v-bind</a></li>
+<li><a href="https://cn.vuejs.org/v2/api/#v-model" target="_blank" rel="external">v-model</a></li>
+<li><a href="https://cn.vuejs.org/v2/api/#v-pre" target="_blank" rel="external">v-pre</a></li>
+<li><a href="https://cn.vuejs.org/v2/api/#v-cloak" target="_blank" rel="external">v-cloak</a><ul>
+<li>如果还想用 <code>&amp;#40&amp;#40&amp;#41&amp;#41</code> 又不想有闪烁问题，则使用 <code>v-cloak</code> 来处理</li>
+<li>在头部加一个特殊的样式：<code>[v-cloak] &amp;#40display: none;&amp;#41</code></li>
+<li>然后在被 Vue 管理的模板入口节点上作用 <code>v-cloak</code> 指令</li>
+<li>原理：默认一开始被 Vue 管理的模板是隐藏着的，当 Vue 解析处理完 DOM 模板之后，会自动把这个样式去除，然后就显示出来</li>
+</ul>
+</li>
+<li><a href="https://cn.vuejs.org/v2/api/#v-once" target="_blank" rel="external">v-once</a></li>
+</ul>
+<h3 id="自定义指令-1"><a href="#自定义指令-1" class="headerlink" title="自定义指令"></a>自定义指令</h3><blockquote>
+<p>操作 DOM 的时候（写代码接触的多了自然就熟了）</p>
+</blockquote>
+<p>在 Vue 中，不要出现直接操作 DOM 的方式，如果想要操作 DOM ，就封装一个自定义指令，然后把这个指定作用到你想要操作的这个 DOM 节点上。（以 Vue 的方式来操作，简化你的代码）</p>
+<ul>
+<li>注册绑定方式<ul>
+<li>指令的名字<ul>
+<li>名字中不要加 <code>v-</code> 前缀（只有使用的时候才加）<ul>
+<li>如果有多个单词，则建议使用驼峰命名法</li>
+<li>在使用的时候，首先要加 <code>v-</code> 前缀，然后对于驼峰命名法的指令，要转为小写，用 <code>-</code> 短横杠拼接起来</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>全局注册<ul>
+<li><code>Vue.directive(&#39;指令名称， &amp;#40配置参数&amp;#41)</code></li>
+<li>如果是全局指令，则一定要在实例化 Vue 之前注册</li>
+</ul>
+</li>
+<li>局部注册<ul>
+<li>同构实例选项 <code>directives</code> 来注册</li>
+<li>指令的名字作为 <code>directives</code> 对象的成员</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>指令的生命钩子函数<ul>
+<li>bind</li>
+<li>inserted</li>
+<li>update</li>
+<li>componentUpdated</li>
+<li>unbind</li>
+</ul>
+</li>
+<li>钩子函数参数<ul>
+<li>el<ul>
+<li>作用该指令的 DOM 元素</li>
+</ul>
+</li>
+<li>binding<ul>
+<li>value 指令的值</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="服务端通信"><a href="#服务端通信" class="headerlink" title="服务端通信"></a>服务端通信</h2><ul>
+<li>Vue 没有内置任何 ajax 请求方法</li>
+</ul>
+<ul>
+<li>在 vue 1.0 时代，大家都使用一个插件：<code>vue resource</code> 来发请求<ul>
+<li>支持 Promise</li>
+</ul>
+</li>
+<li>在 vue 2.0 时代，大家都选择社区中一个非常棒的一个第三方库：<code>axios</code><ul>
+<li>支持 Promise</li>
+</ul>
+</li>
+<li>在 HTML5 时代，后来浏览器增加了一个特殊的异步请求方法：<code>fetch</code> （原生支持 Promise）<ul>
+<li>由于兼容性问题，一般只在移动端使用</li>
+</ul>
+</li>
+<li>甚至你也可能会在一些别人的项目看到 Vue 和 jQuery 混用的情况。</li>
+<li>结合生命钩子获取数据，渲染数据</li>
+</ul>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/19/webpack/" rel="next">webpack</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div>
+      
+        <style type="text/css">
+
+    .donate_bar {
+        text-align: center;
+        margin-top : 5%;
+    }
+
+    .donate_bar.hidden {
+        display:none;
+    }
+/*
+    .donate_bar a.btn_donate {
+        display: inline-block;
+        width: 82px;
+        height: 82px;
+        margin-left:auto;
+        margin-right:auto;
+
+        background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+        _background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat; 
+
+        -webkit-transition: background 0s;
+        -moz-transition: background 0s;
+        -o-transition: background 0s;
+        -ms-transition: background 0s;
+        transition: background 0s;
+    }
+*/
+    .donate_bar a.btn_donate:hover { 
+        // background-position: 0px -82px;
+        color: #87daff
+    }
+
+    .donate_bar .donate_txt {
+        display: block;
+        color: #9d9d9d;
+        font: 14px/2 "Microsoft Yahei";
+    }
+
+    .bold { 
+        font-weight: bold; 
+    }
+
+    .post-donate a {
+        border-bottom: 0px;
+    }
+
+    #donate_guide table {
+        border: none;
+    }
+
+    #donate_guide td {
+        border-bottom: none;
+        border-right: none;
+        background: #333333;
+        valign: top;
+    }
+
+</style>
+
+
+
+    
+
+    <div class ="post-donate">
+        <div id="donate_board" class="donate_bar center">
+              <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">赏</a>
+              <span id="donate_txt" class="donate_txt">
+                   
+              </span>
+            <br>
+        </div>  
+  
+        <div id="donate_guide" class="donate_bar center hidden">
+            <!--
+            
+                <a href="http://o7keinrz4.bkt.clouddn.com/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                    style="float:left;margin-left:25%;margin-right:10px;">
+                    <img src="http://o7keinrz4.bkt.clouddn.com/alipay.jpg" title="" height="164px" width="164px">
+                </a> 
+              
+
+            
+                <a href="http://o7keinrz4.bkt.clouddn.com/wechat.jpg" title="微信打赏" class="fancybox" rel="article0"
+                    style="margin-right:30%">
+                    <img src="http://o7keinrz4.bkt.clouddn.com/wechat.jpg" title="" height="164px" width="164px">
+                </a>
+            
+            -->
+            <table>
+                <tr>
+                    <td>
+                        
+                            <a href="http://o7keinrz4.bkt.clouddn.com/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" 
+                                style="float:left;margin-left:25%;margin-right:10px;">
+                                <img src="http://o7keinrz4.bkt.clouddn.com/alipay.jpg" title="" height="164px" width="164px">
+                            </a> 
+                         
+                    </td>
+                    <td>
+                        
+                            <a href="http://o7keinrz4.bkt.clouddn.com/wechat.jpg" title="微信打赏" class="fancybox" rel="article0"
+                                style="margin-right:30%">
+                                <img src="http://o7keinrz4.bkt.clouddn.com/wechat.jpg" title="" height="164px" width="164px">
+                            </a>
+                        
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById('btn_donate').onclick = function() {
+                $('#donate_board').addClass('hidden');
+                // $('#donate_guide').removeClass('hidden');
+                $('#donate_guide').show(2000);
+            }
+
+        </script>
+    </div>
+
+    
+
+
+      
+    </div>
+
+    <div class="post-spread">
+      
+        <div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+	<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+	<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+</div>
+<script>
+    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Raymond" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Raymond</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">Kategorien</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">Tags</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/liuxian123" target="_blank">GitHub</a>
+              </span>
+            
+          
+        </div>
+
+        <div class="links-of-friendly motion-element">
+          
+        </div>
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue-js-课程讲义"><span class="nav-number">1.</span> <span class="nav-text">Vue.js 课程讲义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-js-介绍"><span class="nav-number">1.1.</span> <span class="nav-text">Vue.js 介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#起步"><span class="nav-number">1.2.</span> <span class="nav-text">起步</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-实例"><span class="nav-number">1.2.2.</span> <span class="nav-text">Vue 实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据绑定"><span class="nav-number">1.2.3.</span> <span class="nav-text">数据绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表单控件双向绑定"><span class="nav-number">1.2.4.</span> <span class="nav-text">表单控件双向绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件与循环"><span class="nav-number">1.2.5.</span> <span class="nav-text">条件与循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件注册"><span class="nav-number">1.2.6.</span> <span class="nav-text">事件注册</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小案例"><span class="nav-number">1.2.7.</span> <span class="nav-text">小案例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#案例：TodoMVC"><span class="nav-number">1.3.</span> <span class="nav-text">案例：TodoMVC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#案例：购物车"><span class="nav-number">1.4.</span> <span class="nav-text">案例：购物车</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板语法"><span class="nav-number">1.5.</span> <span class="nav-text">模板语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算属性和观察者"><span class="nav-number">1.6.</span> <span class="nav-text">计算属性和观察者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Class-与-Style"><span class="nav-number">1.7.</span> <span class="nav-text">Class 与 Style</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件渲染"><span class="nav-number">1.8.</span> <span class="nav-text">条件渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表渲染"><span class="nav-number">1.9.</span> <span class="nav-text">列表渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件处理"><span class="nav-number">1.10.</span> <span class="nav-text">事件处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表单输入绑定"><span class="nav-number">1.11.</span> <span class="nav-text">表单输入绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件"><span class="nav-number">1.12.</span> <span class="nav-text">组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#组件概念"><span class="nav-number">1.12.1.</span> <span class="nav-text">组件概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用组件"><span class="nav-number">1.12.2.</span> <span class="nav-text">使用组件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#全局注册（通用组件）"><span class="nav-number">1.12.2.1.</span> <span class="nav-text">全局注册（通用组件）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#局部注册（子组件）"><span class="nav-number">1.12.2.2.</span> <span class="nav-text">局部注册（子组件）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件与组件之间是相互独立的"><span class="nav-number">1.12.2.3.</span> <span class="nav-text">组件与组件之间是相互独立的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件的-data-必须是函数"><span class="nav-number">1.12.2.4.</span> <span class="nav-text">组件的 data 必须是函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用组件注意事项"><span class="nav-number">1.12.2.5.</span> <span class="nav-text">使用组件注意事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#父子组件通信：Props-Down"><span class="nav-number">1.12.3.</span> <span class="nav-text">父子组件通信：Props Down</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#父子组件通信：Events-Up"><span class="nav-number">1.12.4.</span> <span class="nav-text">父子组件通信：Events Up</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用插槽分发组件内容"><span class="nav-number">1.12.5.</span> <span class="nav-text">使用插槽分发组件内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态组件"><span class="nav-number">1.12.6.</span> <span class="nav-text">动态组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件其它"><span class="nav-number">1.12.7.</span> <span class="nav-text">组件其它</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进入-离开-amp-列表过渡"><span class="nav-number">1.13.</span> <span class="nav-text">进入/离开 & 列表过渡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义指令"><span class="nav-number">1.14.</span> <span class="nav-text">自定义指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-指令"><span class="nav-number">1.15.</span> <span class="nav-text">Vue 指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#系统内置指令"><span class="nav-number">1.15.1.</span> <span class="nav-text">系统内置指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义指令-1"><span class="nav-number">1.15.2.</span> <span class="nav-text">自定义指令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务端通信"><span class="nav-number">1.16.</span> <span class="nav-text">服务端通信</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2017
+  </span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Raymond
+  </span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme by <a class="theme-link" href="http://blog.guxiangfly.cn">guxiangfly</a>.<a class="theme-link" href="https://github.com/GuXiangFly/next-guxiangfly">next-guxiangfly</a>
+</div>
+
+<!-- busuanzi -->
+
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
+
+  
+
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
